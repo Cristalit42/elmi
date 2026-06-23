@@ -6,14 +6,21 @@
   .container {
     display: flex;
     align-items: end;
+    position: relative;
+    z-index: 2;
+
   }
 
-  video{
+  video {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
+  }
+
+  @media (max-width: 1000px) {
+    padding-bottom: 60px;
   }
 }
 
@@ -31,6 +38,16 @@
     color: #fff;
     max-width: 900px;
     width: 100%;
+
+    @media (max-width: 1000px) {
+      font-size: 26px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
   }
 }
 
@@ -51,5 +68,17 @@
     letter-spacing: -0.03em;
     color: #ccc;
     text-align: right;
+
+    @media (max-width: 1000px) {
+      text-align: left;
+      font-size: 14px;
+    }
   }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+  }
+
 }

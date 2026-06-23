@@ -22,15 +22,4 @@ document.addEventListener('DOMContentLoaded', function(){
       overlay.classList.add('overlay--hidden');
     }
   });
-
-  // Симуляция отправки формы
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-
-    // Эмуляция процесса отправки (например, с задержкой)
-    setTimeout(() => {
-      overlay.classList.add('overlay--hidden');
-      form.reset(); // Очистка формы после отправки
-    }, 1000);
-  });
 });

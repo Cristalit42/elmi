@@ -1,0 +1,88 @@
+.burger {
+  position: fixed;
+  z-index: 102;
+  width: 100%;
+  height: 100%;
+  background: #101111;
+  padding: 10px;
+  transition: all .3s;
+  opacity: 0;
+  visibility: hidden;
+
+  &--active{
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
+
+.burger__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 100px;
+  overflow-y: auto;
+
+  .header__contacts {
+    display: grid;
+    grid-template-columns: 1fr 65px;
+    gap: 20px;
+    max-width: 236px;
+    margin: 0 auto;
+    margin-top: auto;
+  }
+
+  .header__phone {
+
+    span {
+      font-size: 16px;
+    }
+
+    div {
+      font-size: 12px;
+    }
+  }
+
+  .header__socials {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .btn{
+    grid-column: 1 / -1;
+    max-width: none;
+  }
+}
+
+.burger_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.header__logo {}
+
+.burger__nav {
+  margin: 50px 0;
+
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: -0.03em;
+    color: #fff;
+  }
+}

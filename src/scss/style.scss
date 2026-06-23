@@ -3,6 +3,8 @@
 
 @import './header.scss';
 @import './footer.scss';
+@import './overlay.scss';
+@import './burger.scss';
 
 @import './main-section.scss';
 @import './info-cols.scss';
@@ -49,11 +51,41 @@ body {
   text-align: center;
   max-width: max-content;
   width: 100%;
+  transition: all .3s;
+
+  &:hover {
+    color: #101111;
+    background: #d6b050;
+  }
 
   &--hollow {
     color: #fff;
     background: transparent;
     border: 1px solid #ccc;
+
+    &:hover {
+      background-color: #fff;
+      color: #101111;
+    }
+  }
+
+
+
+  &--gold {
+    color: #101111;
+    background: #d6b050;
+    border: 1px solid #ffffff00;
+
+    &:hover {
+      background-color: #fff;
+      color: #101111;
+      border: 1px solid #101111;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 14px;
+    padding: 20px 15px;
   }
 
   &--mini {
@@ -63,6 +95,10 @@ body {
 
 .section {
   margin-bottom: 100px;
+
+  @media (max-width: 1000px) {
+    margin-bottom: 50px;
+  }
 }
 
 .section-head {
@@ -70,6 +106,10 @@ body {
   flex-direction: column;
   gap: 10px;
   margin-bottom: 30px;
+
+  @media (max-width: 700px) {
+    margin-bottom: 20px;
+  }
 }
 
 .section-head__uptitle {
@@ -85,6 +125,10 @@ body {
 
   &--white {
     color: #ffffff;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 12px;
   }
 }
 
@@ -108,9 +152,30 @@ body {
     line-height: 138%;
     letter-spacing: -0.03em;
     color: #d6b050;
+
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
   }
 
   &--white {
     color: #fff;
+  }
+
+
+  @media (max-width: 800px) {
+    font-size: 20px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: start;
+  }
+}
+
+.certificates__swiper-slide {
+  img {
+    width: 100%;
+    border-radius: 5px;
+
+    min-height: 220px;
   }
 }

@@ -15,6 +15,14 @@
     position: sticky;
     top: 120px;
     max-height: max-content;
+
+    @media (max-width: 900px) {
+      position: static;
+    }
+  }
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -27,6 +35,14 @@
 .works__content-item {
   position: relative;
   display: block;
+
+  img {
+    width: 100%;
+
+    @media (max-width: 900px) {
+      min-height: 150px;
+    }
+  }
 
   &::before {
     content: '';
@@ -81,4 +97,8 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #d6b050;
+
+  @media (max-width: 900px) {
+    font-size: 16px;
+  }
 }

@@ -3,11 +3,16 @@
 .about__content-wrapper {
   position: relative;
 
-  img{
+  img {
     position: absolute;
     right: -150px;
     bottom: 0;
     z-index: -1;
+
+    @media (max-width: 800px) {
+      width: 100%;
+      position: static;
+    }
   }
 }
 
@@ -27,9 +32,20 @@
     color: #101111c0;
     margin-bottom: 10px;
 
+
+    @media (max-width: 800px) {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
     &:nth-last-child(2) {
       margin-bottom: 30px;
+
+      @media (max-width: 800px) {
+        margin-bottom: 15px;
+      }
     }
+
   }
 
   a {
@@ -39,5 +55,13 @@
     line-height: 138%;
     letter-spacing: -0.03em;
     color: #d6b050;
+
+    @media (max-width: 800px) {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding: 15px;
   }
 }

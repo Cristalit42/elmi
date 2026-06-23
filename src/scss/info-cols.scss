@@ -1,7 +1,7 @@
 .info-cols {
   background: #101111;
   position: relative; // нужно, чтобы .info-cols__stairs позиционировался относительно секции
-  overflow: hidden;    // чтобы кусочки, уезжающие вверх, не вылезали за пределы блока
+  overflow: hidden; // чтобы кусочки, уезжающие вверх, не вылезали за пределы блока
 }
 
 .info-cols__content {
@@ -9,6 +9,10 @@
   grid-template-columns: repeat(4, 1fr);
   position: relative;
   z-index: 1; // текстовые колонки лежат НИЖЕ лесенки с фото (фото перекрывает их сверху)
+
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .info-cols__content-item {
@@ -28,6 +32,45 @@
     letter-spacing: -0.03em;
     color: #ccc;
     position: relative;
+
+    @media (max-width: 700px) {
+      font-size: 14px;
+    }
+  }
+
+  &:last-child {
+    border: none;
+  }
+
+  @media (max-width: 1000px) {
+    min-height: 450px;
+  }
+
+  @media (max-width: 800px) {
+    min-height: auto;
+
+    &:nth-child(1) {
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+
+    &:nth-child(2) {
+      border: none;
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+
+    &:nth-child(3) {
+      padding-bottom: 50px;
+    }
+
+    &:nth-child(4) {
+      padding-bottom: 50px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    gap: 5px;
   }
 }
 
@@ -39,6 +82,10 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fff;
+
+  @media (max-width: 700px) {
+    font-size: 26px;
+  }
 }
 
 /* ===================================================== */
@@ -50,6 +97,10 @@
   inset: 0;
   z-index: 2;
   pointer-events: none; // чтобы не мешало кликам/скроллу под собой
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 }
 
 .info-cols__piece {
@@ -64,8 +115,7 @@
 
   img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 25vw;
     object-fit: cover;
   }
 
@@ -97,28 +147,28 @@
 
 .info-cols__piece--1 {
   left: 0;
-  width: 25%;
+  width: 25vw;
   height: 100%;
   --enter-y: 40px;
 }
 
 .info-cols__piece--2 {
   left: 25%;
-  width: 25%;
+  width: 25vw;
   height: 100%;
   --enter-y: 90px;
 }
 
 .info-cols__piece--3 {
   left: 50%;
-  width: 25%;
+  width: 25vw;
   height: 100%;
   --enter-y: 140px;
 }
 
 .info-cols__piece--4 {
   left: 75%;
-  width: 25%;
+  width: 25vw;
   height: 100%;
   --enter-y: 190px;
 }
@@ -128,6 +178,7 @@
     opacity: 0;
     transform: translateY(var(--enter-y, 60px));
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -139,6 +190,7 @@
     opacity: 1;
     transform: translateY(0);
   }
+
   to {
     opacity: 0;
     transform: translateY(-80px);
@@ -148,6 +200,7 @@
 // уважение к prefers-reduced-motion
 @media (prefers-reduced-motion: reduce) {
   .info-cols__piece {
+
     &.is-visible,
     &.is-leaving {
       animation: none !important;

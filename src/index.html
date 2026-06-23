@@ -15,78 +15,202 @@
 </head>
 
 <body>
+  <div class="wrapper">
 
-  <header class="header">
-    <div class="container">
-      <nav class="header__nav">
-        <ul>
-          <li>
-            <a href="#">
-              Услуги
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Проекты
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              О компании
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Контакты
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <a class="header__logo" href="#">
-        <img src="images/svg/1.svg" alt="logo">
-      </a>
-      <div class="header__contacts">
-        <a class="header__phone" href="#">
-          <span>
-            +7 (812) 339-96-67
-          </span>
-          <div>
-            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="3" cy="3" r="3" fill="#50D659" />
-            </svg>
-            Ежедневно 9:00 - 18:00
-          </div>
-        </a>
-        <div class="header__socials">
-          <a href="#">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#CCCCCC" />
-              <path
-                d="M29.9643 11.1678C26.7981 12.4239 13.2225 17.8109 9.47144 19.2792C6.95575 20.2196 8.42833 21.1013 8.42833 21.1013C8.42833 21.1013 10.5757 21.8065 12.4163 22.3356C14.257 22.8646 15.2387 22.2767 15.2387 22.2767L23.8898 16.6928C26.9575 14.6945 26.2213 16.3401 25.4852 17.0454C23.8898 18.5737 21.2516 20.9834 19.0428 22.9232C18.0611 23.746 18.552 24.4515 18.9814 24.8041C20.5768 26.0972 24.9329 28.7421 25.1785 28.9186C26.4747 29.7976 29.0243 31.0631 29.412 28.3895L30.946 19.1615C31.4369 16.0463 31.9277 13.1661 31.9891 12.3433C32.173 10.345 29.9643 11.1678 29.9643 11.1678Z"
-                fill="white" />
-            </svg>
+    <div class="burger">
+      <div class="burger__content">
+        <div class="burger_head">
+          <a class="header__logo" href="/">
+            <img src="images/svg/1.svg" alt="logo">
           </a>
-          <a href="#">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#CCCCCC" />
-              <path
-                d="M21.0718 28C12.8719 28 8.19489 22.3694 8 13H12.1074C12.2424 19.8769 15.2704 22.7898 17.6689 23.3904V13H21.5366V18.9309C23.9051 18.6756 26.3932 15.973 27.2327 13H31.1004C30.4558 16.6637 27.7575 19.3663 25.8387 20.4774C27.7575 21.3783 30.8307 23.7357 32 28H27.7425C26.8281 25.1471 24.5497 22.9399 21.5366 22.6396V28H21.0718Z"
-                fill="white" />
+          <button class="js-burger__btn-close" type="button">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_37_5520)">
+                <rect x="5.80713" y="22.7781" width="24" height="2" rx="1" transform="rotate(-45 5.80713 22.7781)"
+                  fill="#D6B050" />
+                <rect x="22.7778" y="24.1923" width="24" height="2" rx="1" transform="rotate(-135 22.7778 24.1923)"
+                  fill="#D6B050" />
+              </g>
+              <rect x="0.5" y="0.5" width="29" height="29" rx="5.5" stroke="#CCCCCC" />
             </svg>
-          </a>
+          </button>
         </div>
-        <button class="btn btn--hollow btn--mini js-overlay__btn-open" type="button">
-          Консультация
-        </button>
+        <nav class="burger__nav">
+          <ul>
+            <li>
+              <a href="#">
+                Услуги
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Проекты
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                О компании
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__contacts">
+          <a class="header__phone" href="#">
+            <span>
+              +7 (812) 339-96-67
+            </span>
+            <div>
+              <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="3" cy="3" r="3" fill="#50D659" />
+              </svg>
+              Ежедневно 9:00 - 18:00
+            </div>
+          </a>
+          <div class="header__socials">
+            <a href="#">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#CCCCCC" />
+                <path
+                  d="M29.9643 11.1678C26.7981 12.4239 13.2225 17.8109 9.47144 19.2792C6.95575 20.2196 8.42833 21.1013 8.42833 21.1013C8.42833 21.1013 10.5757 21.8065 12.4163 22.3356C14.257 22.8646 15.2387 22.2767 15.2387 22.2767L23.8898 16.6928C26.9575 14.6945 26.2213 16.3401 25.4852 17.0454C23.8898 18.5737 21.2516 20.9834 19.0428 22.9232C18.0611 23.746 18.552 24.4515 18.9814 24.8041C20.5768 26.0972 24.9329 28.7421 25.1785 28.9186C26.4747 29.7976 29.0243 31.0631 29.412 28.3895L30.946 19.1615C31.4369 16.0463 31.9277 13.1661 31.9891 12.3433C32.173 10.345 29.9643 11.1678 29.9643 11.1678Z"
+                  fill="white" />
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#CCCCCC" />
+                <path
+                  d="M21.0718 28C12.8719 28 8.19489 22.3694 8 13H12.1074C12.2424 19.8769 15.2704 22.7898 17.6689 23.3904V13H21.5366V18.9309C23.9051 18.6756 26.3932 15.973 27.2327 13H31.1004C30.4558 16.6637 27.7575 19.3663 25.8387 20.4774C27.7575 21.3783 30.8307 23.7357 32 28H27.7425C26.8281 25.1471 24.5497 22.9399 21.5366 22.6396V28H21.0718Z"
+                  fill="white" />
+              </svg>
+            </a>
+          </div>
+          <button class="btn btn--hollow btn--mini js-overlay__btn-open" type="button">
+            Консультация
+          </button>
+        </div>
       </div>
     </div>
-  </header>
 
-  <main>
-    <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <ul>
+            <li>
+              <a href="#">
+                Услуги
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Проекты
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                О компании
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <a class="header__logo" href="#">
+          <img src="images/svg/1.svg" alt="logo">
+        </a>
+        <div class="header__contacts">
+          <a class="header__phone" href="#">
+            <span>
+              +7 (812) 339-96-67
+            </span>
+            <div>
+              <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="3" cy="3" r="3" fill="#50D659" />
+              </svg>
+              Ежедневно 9:00 - 18:00
+            </div>
+          </a>
+          <div class="header__socials">
+            <a href="#">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#CCCCCC" />
+                <path
+                  d="M29.9643 11.1678C26.7981 12.4239 13.2225 17.8109 9.47144 19.2792C6.95575 20.2196 8.42833 21.1013 8.42833 21.1013C8.42833 21.1013 10.5757 21.8065 12.4163 22.3356C14.257 22.8646 15.2387 22.2767 15.2387 22.2767L23.8898 16.6928C26.9575 14.6945 26.2213 16.3401 25.4852 17.0454C23.8898 18.5737 21.2516 20.9834 19.0428 22.9232C18.0611 23.746 18.552 24.4515 18.9814 24.8041C20.5768 26.0972 24.9329 28.7421 25.1785 28.9186C26.4747 29.7976 29.0243 31.0631 29.412 28.3895L30.946 19.1615C31.4369 16.0463 31.9277 13.1661 31.9891 12.3433C32.173 10.345 29.9643 11.1678 29.9643 11.1678Z"
+                  fill="white" />
+              </svg>
+            </a>
+            <a href="#">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#CCCCCC" />
+                <path
+                  d="M21.0718 28C12.8719 28 8.19489 22.3694 8 13H12.1074C12.2424 19.8769 15.2704 22.7898 17.6689 23.3904V13H21.5366V18.9309C23.9051 18.6756 26.3932 15.973 27.2327 13H31.1004C30.4558 16.6637 27.7575 19.3663 25.8387 20.4774C27.7575 21.3783 30.8307 23.7357 32 28H27.7425C26.8281 25.1471 24.5497 22.9399 21.5366 22.6396V28H21.0718Z"
+                  fill="white" />
+              </svg>
+            </a>
+          </div>
+          <button class="btn btn--hollow btn--mini js-overlay__btn-open" type="button">
+            Консультация
+          </button>
+        </div>
+        <button class="js-burger__btn-open" type="button">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="29" height="29" rx="5.5" stroke="#CCCCCC" />
+            <rect x="3" y="7" width="24" height="2" rx="1" fill="white" />
+            <rect x="3" y="14" width="24" height="2" rx="1" fill="white" />
+            <rect x="3" y="21" width="24" height="2" rx="1" fill="white" />
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="overlay overlay--hidden">
+      <div class="overlay__content">
+        <button class="js-overlay__btn-close" type="button">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="7.77783" y="24.7486" width="24" height="2" rx="1" transform="rotate(-45 7.77783 24.7486)"
+              fill="#D6B050" />
+            <rect x="24.749" y="26.1629" width="24" height="2" rx="1" transform="rotate(-135 24.749 26.1629)"
+              fill="#D6B050" />
+          </svg>
+        </button>
+        <div class="section-title">
+          РАССЧИТАЙТЕ СТОИМОСТЬ ДОСТАВКИ
+        </div>
+        <p class="overlay__text">
+          Заполните форму, и мы свяжемся с Вами в ближайшее время
+        </p>
+        <form>
+          <label>
+            <input type="text" placeholder="Ваше Имя">
+          </label>
+          <label>
+            <input type="tel" placeholder="Номер телефона">
+          </label>
+          <label class="custom-checkbox">
+            <input type="checkbox">
+            <div>
+              Я даю согласию на обработку моих персональных данных в соотвествии
+              <span class="rights_download">с Политикой в отношении обработки персональных данных</span>
+            </div>
+          </label>
+          <button class="btn btn--gold" type="submit">
+            Рассчитать стоимость
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <main>
       <section class="main-section">
         <video autoplay muted loop playsinline>
-          <source src="images/png/1.mp4" type="video/mp4">
+          <source src="./images/png/2.mp4" type="video/mp4">
         </video>
         <div class="container">
           <div class="main-section__content">
@@ -570,150 +694,149 @@
           </div>
         </div>
       </section>
+      <section class="certificates section">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-title">
+              Благодарственные письма и сертификаты
+            </div>
+          </div>
+          <div class="certificates__content">
 
-    </div>
-    <section class="certificates section">
+            <div class="certificates__swiper swiper">
+
+              <div class="certificates__swiper-wrapper swiper-wrapper">
+                <div class="certificates__swiper-slide swiper-slide">
+                  <a href="images/png/11.png" data-fancybox="projects-certificates">
+                    <img src="images/png/11.png" alt="img">
+                  </a>
+                </div>
+                <div class="certificates__swiper-slide swiper-slide">
+                  <a href="images/png/11.png" data-fancybox="projects-certificates">
+                    <img src="images/png/11.png" alt="img">
+                  </a>
+                </div>
+                <div class="certificates__swiper-slide swiper-slide">
+                  <a href="images/png/11.png" data-fancybox="projects-certificates">
+                    <img src="images/png/11.png" alt="img">
+                  </a>
+                </div>
+                <div class="certificates__swiper-slide swiper-slide">
+                  <a href="images/png/11.png" data-fancybox="projects-certificates">
+                    <img src="images/png/11.png" alt="img">
+                  </a>
+                </div>
+                <div class="certificates__swiper-slide swiper-slide">
+                  <a href="images/png/11.png" data-fancybox="projects-certificates">
+                    <img src="images/png/11.png" alt="img">
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" style="background-image: url(images/png/12.png);">
       <div class="container">
-        <div class="section-head">
-          <div class="section-title">
-            Благодарственные письма и сертификаты
+        <div class="footer__descr">
+          <div class="section-title section-title--white">
+            Рассчитаем стоимость перевозки
           </div>
+          <p>
+            Свяжемся с вами и предложим оптимальный вариант перевозки с учётом всех особенностей вашего груза.
+          </p>
+          <button class="btn js-overlay__btn-open" type="button">
+            Рассчитать стоимость
+          </button>
         </div>
-        <div class="certificates__content">
-
-          <div class="certificates__swiper swiper">
-
-            <div class="certificates__swiper-wrapper swiper-wrapper">
-              <div class="certificates__swiper-slide swiper-slide">
-                <a href="images/png/11.png" data-fancybox="projects-certificates">
-                  <img src="images/png/11.png" alt="img">
+        <div class="footer__content">
+          <nav class="footer__nav">
+            <ul>
+              <li>
+                <a href="#">
+                  Услуги
                 </a>
-              </div>
-              <div class="certificates__swiper-slide swiper-slide">
-                <a href="images/png/11.png" data-fancybox="projects-certificates">
-                  <img src="images/png/11.png" alt="img">
+              </li>
+              <li>
+                <a href="#">
+                  Услуги
                 </a>
-              </div>
-              <div class="certificates__swiper-slide swiper-slide">
-                <a href="images/png/11.png" data-fancybox="projects-certificates">
-                  <img src="images/png/11.png" alt="img">
+              </li>
+              <li>
+                <a href="#">
+                  Услуги
                 </a>
-              </div>
-              <div class="certificates__swiper-slide swiper-slide">
-                <a href="images/png/11.png" data-fancybox="projects-certificates">
-                  <img src="images/png/11.png" alt="img">
+              </li>
+              <li>
+                <a href="#">
+                  Услуги
                 </a>
-              </div>
-              <div class="certificates__swiper-slide swiper-slide">
-                <a href="images/png/11.png" data-fancybox="projects-certificates">
-                  <img src="images/png/11.png" alt="img">
-                </a>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer" style="background-image: url(images/png/12.png);">
-    <div class="container">
-      <div class="footer__descr">
-        <div class="section-title section-title--white">
-          Рассчитаем стоимость перевозки
-        </div>
-        <p>
-          Свяжемся с вами и предложим оптимальный вариант перевозки с учётом всех особенностей вашего груза.
-        </p>
-        <button class="btn js-overlay__btn-open" type="button">
-          Рассчитать стоимость
-        </button>
-      </div>
-      <div class="footer__content">
-        <nav class="footer__nav">
-          <ul>
-            <li>
-              <a href="#">
-                Услуги
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Услуги
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Услуги
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Услуги
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="footer__logo">
-          <a href="/">
-            <img src="images/svg/1.svg" alt="logo">
-          </a>
-          <div class="footer__logo-rights">
-            <span>
-              © 2026 Все права защищены
-            </span>
-            <a href="#" download="">
-              Политика конфиденциальности
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__logo">
+            <a href="/">
+              <img src="images/svg/1.svg" alt="logo">
             </a>
-            <a href="https://юзертеч.рф">
-              Разработано в Usertech
-            </a>
-          </div>
-        </div>
-        <div class="footer__contacts">
-          <div class="footer__contacts-row">
-            <a class="header__phone" href="#">
+            <div class="footer__logo-rights">
               <span>
-                +7 (812) 339-96-67
+                © 2026 Все права защищены
               </span>
-              <div>
-                <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="3" cy="3" r="3" fill="#50D659" />
-                </svg>
-                Ежедневно 9:00 - 18:00
-              </div>
-            </a>
-            <div class="header__socials">
-              <a href="#">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#CCCCCC" />
-                  <path
-                    d="M29.9643 11.1678C26.7981 12.4239 13.2225 17.8109 9.47144 19.2792C6.95575 20.2196 8.42833 21.1013 8.42833 21.1013C8.42833 21.1013 10.5757 21.8065 12.4163 22.3356C14.257 22.8646 15.2387 22.2767 15.2387 22.2767L23.8898 16.6928C26.9575 14.6945 26.2213 16.3401 25.4852 17.0454C23.8898 18.5737 21.2516 20.9834 19.0428 22.9232C18.0611 23.746 18.552 24.4515 18.9814 24.8041C20.5768 26.0972 24.9329 28.7421 25.1785 28.9186C26.4747 29.7976 29.0243 31.0631 29.412 28.3895L30.946 19.1615C31.4369 16.0463 31.9277 13.1661 31.9891 12.3433C32.173 10.345 29.9643 11.1678 29.9643 11.1678Z"
-                    fill="white" />
-                </svg>
+              <a href="#" download="">
+                Политика конфиденциальности
               </a>
-              <a href="#">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#CCCCCC" />
-                  <path
-                    d="M21.0718 28C12.8719 28 8.19489 22.3694 8 13H12.1074C12.2424 19.8769 15.2704 22.7898 17.6689 23.3904V13H21.5366V18.9309C23.9051 18.6756 26.3932 15.973 27.2327 13H31.1004C30.4558 16.6637 27.7575 19.3663 25.8387 20.4774C27.7575 21.3783 30.8307 23.7357 32 28H27.7425C26.8281 25.1471 24.5497 22.9399 21.5366 22.6396V28H21.0718Z"
-                    fill="white" />
-                </svg>
+              <a href="https://юзертеч.рф">
+                Разработано в Usertech
               </a>
             </div>
           </div>
-          <a class="footer__contacts-item" href="#">
-            info@elmilogistika.ru
-          </a>
-          <a class="footer__contacts-item" href="#">
-            Санкт-Петербург, Межевой канал 5АХ, Балтийский Морской Центр, офис 1007
-          </a>
+          <div class="footer__contacts">
+            <div class="footer__contacts-row">
+              <a class="header__phone" href="#">
+                <span>
+                  +7 (812) 339-96-67
+                </span>
+                <div>
+                  <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="3" cy="3" r="3" fill="#50D659" />
+                  </svg>
+                  Ежедневно 9:00 - 18:00
+                </div>
+              </a>
+              <div class="header__socials">
+                <a href="#">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#CCCCCC" />
+                    <path
+                      d="M29.9643 11.1678C26.7981 12.4239 13.2225 17.8109 9.47144 19.2792C6.95575 20.2196 8.42833 21.1013 8.42833 21.1013C8.42833 21.1013 10.5757 21.8065 12.4163 22.3356C14.257 22.8646 15.2387 22.2767 15.2387 22.2767L23.8898 16.6928C26.9575 14.6945 26.2213 16.3401 25.4852 17.0454C23.8898 18.5737 21.2516 20.9834 19.0428 22.9232C18.0611 23.746 18.552 24.4515 18.9814 24.8041C20.5768 26.0972 24.9329 28.7421 25.1785 28.9186C26.4747 29.7976 29.0243 31.0631 29.412 28.3895L30.946 19.1615C31.4369 16.0463 31.9277 13.1661 31.9891 12.3433C32.173 10.345 29.9643 11.1678 29.9643 11.1678Z"
+                      fill="white" />
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.5" y="0.5" width="39" height="39" rx="9.5" stroke="#CCCCCC" />
+                    <path
+                      d="M21.0718 28C12.8719 28 8.19489 22.3694 8 13H12.1074C12.2424 19.8769 15.2704 22.7898 17.6689 23.3904V13H21.5366V18.9309C23.9051 18.6756 26.3932 15.973 27.2327 13H31.1004C30.4558 16.6637 27.7575 19.3663 25.8387 20.4774C27.7575 21.3783 30.8307 23.7357 32 28H27.7425C26.8281 25.1471 24.5497 22.9399 21.5366 22.6396V28H21.0718Z"
+                      fill="white" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <a class="footer__contacts-item" href="#">
+              info@elmilogistika.ru
+            </a>
+            <a class="footer__contacts-item" href="#">
+              Санкт-Петербург, Межевой канал 5АХ, Балтийский Морской Центр, офис 1007
+            </a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="./js/index.js" type="module"></script>
