@@ -1,0 +1,158 @@
+.info-cols {
+  background: #101111;
+  position: relative; // нужно, чтобы .info-cols__stairs позиционировался относительно секции
+  overflow: hidden;    // чтобы кусочки, уезжающие вверх, не вылезали за пределы блока
+}
+
+.info-cols__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  z-index: 1; // текстовые колонки лежат НИЖЕ лесенки с фото (фото перекрывает их сверху)
+}
+
+.info-cols__content-item {
+  display: flex;
+  flex-direction: column;
+  min-height: 750px;
+  gap: 10px;
+  border-right: 1px solid rgba(204, 204, 204, 0.2);
+  align-items: center;
+  justify-content: center;
+
+  p {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 138%;
+    letter-spacing: -0.03em;
+    color: #ccc;
+    position: relative;
+  }
+}
+
+.info-cols__item-title {
+  font-family: $second-family;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* ===================================================== */
+/* ЛЕСТНИЦА ИЗ 4-Х КУСКОВ ФОТО                            */
+/* ===================================================== */
+
+.info-cols__stairs {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none; // чтобы не мешало кликам/скроллу под собой
+}
+
+.info-cols__piece {
+  position: absolute;
+  top: 0; // у всех кусков top: 0 СРАЗУ, статично — никаких переключений top через классы
+  opacity: 0;
+  // стартовая позиция для slide-up: куски лежат "лесенкой" ниже своего конечного места.
+  // --enter-y задаётся инлайн в HTML/JS под каждый кусок (см. data-enter-y) —
+  // именно это и создаёт эффект "лесенки": каждый кусок появляется СО СВОЕЙ высоты.
+  transform: translateY(var(--enter-y, 60px));
+  will-change: transform, opacity;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // когда JS добавляет класс — кусок всплывает и собирается в финальную точку (translateY(0))
+  &.is-visible {
+    animation: piece-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  // когда JS добавляет класс — кусок уезжает вверх и тает.
+  // ВАЖНО: класс is-visible НЕ снимается перед добавлением is-leaving
+  // (см. JS) — поэтому translateY(0) от piece-in остаётся как стартовая
+  // точка для piece-out, и телепорта в исходную "лесенку" не происходит.
+  &.is-leaving {
+    animation: piece-out 0.6s cubic-bezier(0.7, 0, 0.84, 0) forwards;
+  }
+}
+
+/*
+  Позиции кусков по left/width/height — финальная "куча" (все top: 0).
+  Эти left/width/height — ПРИМЕРНЫЕ, под пропорции макета.
+  Когда будут готовы реальные нарезанные PNG — подставьте сюда
+  точные размеры и отступы каждого куска, чтобы при сборке
+  все 4 части стыковались в одно цельное фото без зазоров.
+
+  --enter-y — это СТАРТОВОЕ смещение по Y для лесенки при появлении.
+  Чем больше число, тем "ниже" кусок начинает свой путь.
+  Можно подвигать эти цифры, чтобы лесенка выглядела как нужно.
+*/
+
+.info-cols__piece--1 {
+  left: 0;
+  width: 25%;
+  height: 100%;
+  --enter-y: 40px;
+}
+
+.info-cols__piece--2 {
+  left: 25%;
+  width: 25%;
+  height: 100%;
+  --enter-y: 90px;
+}
+
+.info-cols__piece--3 {
+  left: 50%;
+  width: 25%;
+  height: 100%;
+  --enter-y: 140px;
+}
+
+.info-cols__piece--4 {
+  left: 75%;
+  width: 25%;
+  height: 100%;
+  --enter-y: 190px;
+}
+
+@keyframes piece-in {
+  from {
+    opacity: 0;
+    transform: translateY(var(--enter-y, 60px));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes piece-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+}
+
+// уважение к prefers-reduced-motion
+@media (prefers-reduced-motion: reduce) {
+  .info-cols__piece {
+    &.is-visible,
+    &.is-leaving {
+      animation: none !important;
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

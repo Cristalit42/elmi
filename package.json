@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.13.3",
+    "mixitup": "^3.3.2",
+    "parcel": "^2.13.3",
+    "posthtml-include": "^2.0.1",
+    "swiper": "^11.2.2"
+  },
+  "scripts": {
+    "dev": "parcel serve --no-cache ./src/index.html --open",
+    "build": "parcel build ./src/index.html --no-content-hash --no-source-maps --no-cache --no-optimize --dist-dir build --public-url ./"
+  }
+}

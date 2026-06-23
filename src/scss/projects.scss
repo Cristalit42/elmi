@@ -1,0 +1,15 @@
+.projects {}
+
+.projects__content {}
+
+.projects__swiper {}
+
+.projects__swiper-wrapper {}
+
+.projects__swiper-slide {
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}

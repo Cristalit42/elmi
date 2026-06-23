@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Xolonium";
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url("../fonts/xolonium-bold.eot") format("eot"),
+    url("../fonts/xolonium-bold.woff") format("woff"),
+    url("../fonts/xolonium-bold.woff2") format("woff2");
+  font-display: swap;
+}
+
+
+$font-family: "Montserrat", sans-serif;
+$second-family: "Xolonium", sans-serif;
